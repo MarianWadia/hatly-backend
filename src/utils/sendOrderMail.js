@@ -11,17 +11,16 @@ const sendOrderMail = async (user, order) =>{
     } of ${product.productId.name} for ${(product.productId.price * product.quantity)}EGP<h4/>`)
   })
 
-  var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'trendlix6@gmail.com',
-      pass: 'marian@trendlix.com'
-    }
-  });
+  // var transporter = nodemailer.createTransport({
+  //   service: 'gmail',
+  //   auth: {
+  //     user: 'trendlix6@gmail.com',
+  //     pass: 'marian@trendlix.com'
+  //   }
+  // });
 
   try {
     const mailOptions = {
-      from: "trendlix6@gmail.com",
       to: email,
       subject: "Hatly Order",
       html: `<body style="background-position: center; background-color: #e2f3f5; color: #4caf50; padding:50px; background-image:url('https://www.clipartmax.com/png/full/188-1883743_man-celebrating-success-man-raise-hands-png.png'); background-size: contain; background-repeat: no-repeat;">
